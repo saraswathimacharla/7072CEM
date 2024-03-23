@@ -212,7 +212,8 @@ plt.xlabel('ML Algorithms')
 plt.ylabel('Train Accuracy (%)')
 plt.show()
 
-
+#plots for classification reports
+#plot for Precision
 precision = [['KNN',100,35,52],['DT',76,57,65],['LR',100,48,65]]
 df_pre = pd.DataFrame(precision, columns = ['Name','Precision','recall','f1score'])
 df_pre.plot.bar(x='Name',y = 'Precision',width = 0.3)
@@ -221,12 +222,14 @@ plt.xlabel('ML Algorithms')
 plt.ylabel('Precision (%)')
 plt.show()
 
+#plot for Recall
 df_pre.plot.bar(x='Name',y = 'recall',width = 0.3)
 plt.title('Recall scores of different ML algorithms')
 plt.xlabel('ML Algorithms')
 plt.ylabel('Recall (%)')
 plt.show()
 
+#plot for f1-score
 df_pre.plot.bar(x='Name',y = 'f1score',width = 0.3)
 plt.title('f1score of different ML algorithms')
 plt.xlabel('ML Algorithms')
